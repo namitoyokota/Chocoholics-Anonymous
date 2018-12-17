@@ -1,0 +1,8 @@
+Our organization is responsible for designing the data processing software that will be 
+employed during healthcare and billing related services. Another organization will be designing 
+a communications software to establish communication between our software and third-party 
+organizations. Particularly, our software will need to communicate with the Data Center to 
+verify memberships. A monitor, keyboard, and card reader will be required to allow providers 
+to interact with our software to provide services and managers can review summary reports. 
+The data generated from our software, such as member and provider reports, EFT data, and 
+provider directory will be stored in files and member numbers will be stored at the Data Center. 

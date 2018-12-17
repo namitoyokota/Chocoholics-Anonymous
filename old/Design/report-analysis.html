@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS 200-001</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+
+    <!-- Menu Bar -->
+    <div>
+      <ul>
+        <li><a href="report.html">Home</a></li>
+        <li><a href="report-requirements.html">Requirements</a></li>
+        <li><a class="active" href="report-analysis.html">Analysis</a></li>
+        <li><a href="report-design.html">Design</a></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Analysis</h1>
+      <div class="names">
+        <!-- specify the submitter -->
+        <p>(Submitter)&nbsp;<b>Namito Yokota</b> - 11793390 - nyokota@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Josh Engler</b> - 11809462 - jdengler@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Hunter Esposito</b> - 11619229 - hesposito@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Ashley Phan</b> - 11494997 - ahphan@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Conrad Spear</b> - 11534127 - caspear1@crimson.ua.edu - 8 hours spent</p>
+      </div>
+    </div>
+
+    <!-- Task Distribution -->
+    <div>
+      <hr>
+      <h2><b><a href="./images/analysis/commits.png">Task Distribution</a></b></h2>
+      <center><img src="./images/analysis/commits.png" style="width: 90%; height: 90%"></center>
+      <p><b>Namito Yokota</b> - Report, Task 2 - <b>20%</b><br>
+        <b>Josh Engler</b> - Task 2 and 3 - <b>20%</b><br>
+        <b>Hunter Esposito</b> - Task 2 - <b>20%</b><br>
+        <b>Ashley Phan</b> - Task 1 and 2 - <b>20%</b><br>
+        <b>Conrad Spear</b> - Task 2 - <b>20%</b>
+      <br>
+    </div>
+
+    <!-- Analysis Description -->
+    <div>
+      <hr>
+      <h2><b><a href="./other/analysis/analysis_description">Analysis Description</b></a></h2>
+      <p>Our organization is responsible for designing the data processing software that will be
+          employed during healthcare and billing related services. Another organization will be designing
+          a communications software to establish communication between our software and third-party
+          organizations. Particularly, our software will need to communicate with the Data Center to
+          verify memberships. A monitor, keyboard, and card reader will be required to allow providers
+          to interact with our software to provide services and managers can review summary reports.
+          The data generated from our software, such as member and provider reports, EFT data, and
+          provider directory will be stored in files and member numbers will be stored at the Data Center.
+      </p>
+    </div>
+
+    <!-- Stereotyped Class Diagram -->
+    <div>
+      <hr>
+      <h2><b><a href="./vpp/analysis/ClassDiagram">Stereotyped Class Diagram</b></a></h2>
+      <center><img src="./images/analysis/classdiagram.jpg"></center>
+      <hr>
+    </div>
+
+    <!-- Acitivity Diagrams -->
+    <div>
+      <h2><b><a href="./vpp/analysis/MainActivityDiagramsFinal.vpp">Activity Diagrams</b></a></h2>
+      <center>
+        <h2>ChocAn System</h2>
+        <img src="./images/analysis/activity/ChocAn_System.png" style="width: 50%; height: 50%"><hr>
+        <h2>Provider Login</h2>
+        <img src="./images/analysis/activity/provider_menu/Provider_Login.png" style="width: 40%; height: 40%"><hr>
+        <h2>Bill ChocAn</h2>
+        <img src="./images/analysis/activity/provider_menu/Bill_ChocAn.png" style="width: 60%; height: 60%"><hr>
+        <h2>Operator Menu</h2>
+        <img src="./images/analysis/activity/operator_menu/Operator_Menu.png" style="width: 50%; height: 50%"><hr>
+        <h2>Manage Member</h2>
+        <img src="./images/analysis/activity/operator_menu/Manage_Member.png" style="width: 30%; height: 30%"><hr>
+        <h2>Add Member</h2>
+        <img src="./images/analysis/activity/operator_menu/Add_Member.png" style="width: 20%; height: 20%"><hr>
+        <h2>Delete Member</h2>
+        <img src="./images/analysis/activity/operator_menu/Delete_Member.png" style="width: 25%; height: 25%"><hr>
+        <h2>Update Member</h2>
+        <img src="./images/analysis/activity/operator_menu/Update_Member.png" style="width: 20%; height: 20%"><hr>
+        <h2>Manage Provider</h2>
+        <img src="./images/analysis/activity/operator_menu/Manage_Provider.png" style="width: 30%; height: 30%"><hr>
+        <h2>Add Provider</h2>
+        <img src="./images/analysis/activity/operator_menu/Add_Provider.png" style="width: 20%; height: 20%"><hr>
+        <h2>Delete Provider</h2>
+        <img src="./images/analysis/activity/operator_menu/Delete_Provider.png" style="width: 25%; height: 25%"><hr>
+        <h2>Update Provider</h2>
+        <img src="./images/analysis/activity/operator_menu/Update_Provider.png" style="width: 20%; height: 20%"><hr>
+        <h2>Manager Reports</h2>
+        <img src="./images/analysis/activity/manager_menu/Manager_Reports.png" style="width: 60%; height: 60%"><hr>
+        <h2>Member Report</h2>
+        <img src="./images/analysis/activity/manager_menu/Member_Report.png" style="width: 50%; height: 50%"><hr>
+        <h2>Provider Report</h2>
+        <img src="./images/analysis/activity/manager_menu/Provider_Report.png" style="width: 50%; height: 50%"><hr>
+        <h2>Summary Report</h2>
+        <img src="./images/analysis/activity/manager_menu/Summary_Report.png" style="width: 50%; height: 50%"><hr>
+        <h2>Produce Member Report</h2>
+        <img src="./images/analysis/activity/generate_weekly_report/Produce_Member_Report.png" style="width: 50%; height: 50%"><hr>
+        <h2>Produce Provider Report</h2>
+        <img src="./images/analysis/activity/generate_weekly_report/Produce_Provider_Report.png" style="width: 60%; height: 60%"><hr>
+        <h2>Produce Summary Report</h2>
+        <img src="./images/analysis/activity/generate_weekly_report/Produce_Summary_Report.png" style="width: 30%; height: 30%"><hr>
+      <center>
+    </div>
+
+    <p style="text-align: right">Last updated : 10/18/18</p>
+
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS 200-001</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+
+    <!-- Menu Bar -->
+    <div>
+      <ul>
+        <li><a href="report.html">Home</a></li>
+        <li><a class="active" href="report-requirements.html">Requirements</a></li>
+        <li><a href="report-analysis.html">Analysis</a></li>
+        <li><a href="report-design.html">Design</a></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Requirements</h1>
+      <div class="names">
+        <!-- specify the submitter -->
+        <p>(Submitter)&nbsp;<b>Namito Yokota</b> - 11793390 - nyokota@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Josh Engler</b> - 11809462 - jdengler@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Hunter Esposito</b> - 11619229 - hesposito@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Ashley Phan</b> - 11494997 - ahphan@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Conrad Spear</b> - 11534127 - caspear1@crimson.ua.edu - 8 hours spent</p>
+      </div>
+    </div>
+
+    <!-- Task Distribution -->
+    <div>
+      <hr>
+      <h2><b><a href="./images/requirements/commits.png">Task Distribution</a></b></h2>
+      <center><img src="./images/requirements/commits.png" style="width: 60%; height: 60%"></center>
+      <p><b>Namito Yokota</b> - Report, UML Class Diagram (Manage Accounts) - <b>20%</b><br>
+        <b>Josh Engler</b> - UML Class Diagram (Provider Directory Lookup) - <b>20%</b><br>
+        <b>Hunter Esposito</b> - UML Class Diagram (Healthcare Services) - <b>20%</b><br>
+        <b>Ashley Phan</b> - UML Class Diagram (Verification) - <b>20%</b><br>
+        <b>Conrad Spear</b> - UML Class Diagram (Accounting) - <b>20%</b>
+      <br>
+    </div>
+
+    <!-- Use Cases -->
+    <div>
+      <hr>
+      <h2><b>Use Cases</b></h2>
+      <!-- Manage Accounts -->
+      <div>
+        <p><center><b><a href="./vpp/requirements/Manage_Accounts">Manage Accounts</a></b></center></p>
+        <center><img src="./images/requirements/manage_accounts.jpg"></center>
+
+        <!-- Manage Member -->
+        <div>
+          <hr>
+          <p>
+            <b>Use Case</b>: Manage Member
+          </p>
+          <p>
+            <b>Context</b>: The software at the ChocAn Data Center is ran which allows operators to add new members
+              to ChocAn, to delete members who have resigned, and to update member records.
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	The operator logs in to the system<br>
+            &nbsp;2.	The system displays a menu for the operator who can select an option<br>
+            &nbsp;3.	The operator chooses to manage members<br>
+            &nbsp;4.	The system displays a menu with options to add, edit, or delete a member<br>
+            &nbsp;5.	The operator performs the management process<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;1a. The log in information is not valid<br>
+          	&nbsp;&nbsp;1a.1.  The system informs the operator<br>
+          	&nbsp;&nbsp;1a.2.  The use case goes back to step 1<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Add Member -->
+        <div>
+          <p>
+            <b>Use Case</b>: Add Member <b>extends</b> Manage Member
+          </p>
+          <p>
+            <b>Context</b>: The operator adds a member to the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the new member to add<br>
+          	&nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+            &nbsp;&nbsp;5.3.  The system adds the member<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The member already exists in the system<br>
+            &nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 4<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Delete Member -->
+        <div>
+          <p>
+            <b>Use Case</b>: Delete Member <b>extends</b> Manage Member
+          </p>
+          <p>
+            <b>Context</b>: The operator deletes a member from the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the member to delete<br>
+          	&nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+          	&nbsp;&nbsp;5.3.  The system finds the member on the database<br>
+            &nbsp;&nbsp;5.4.  The system deletes the member<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The member does not exist in the system<br>
+          	&nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+          	&nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2c.  The member is suspended<br>
+          	&nbsp;&nbsp;&nbsp;5.2c.1.  The system informs the operator<br>
+          	&nbsp;&nbsp;&nbsp;5.2c.2.  The use case goes back to step 5.1<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Update Member -->
+        <div>
+          <p>
+            <b>Use Case</b>: Update Member <b>extends</b> Manage Member
+          </p>
+          <p>
+            <b>Context</b>: The operator updates information of a member on the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the member to update<br>
+          	&nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+          	&nbsp;&nbsp;5.3.  The system finds the member on the database<br>
+            &nbsp;&nbsp;5.4.  The operator enters information of the member to update<br>
+            &nbsp;&nbsp;5.5.  The system updates the member<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The member does not exist in the system<br>
+          	&nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+          	&nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2c.  The member is suspended<br>
+          	&nbsp;&nbsp;&nbsp;5.2c.1.  The system informs the operator<br>
+          	&nbsp;&nbsp;&nbsp;5.2c.2.  The use case goes back to step 5.3<br>
+          </p>
+          <hr>
+        </div>
+
+        <!-- Manage Provider -->
+        <div>
+          <p>
+            <b>Use Case</b>: Manage Provider
+          </p>
+          <p>
+            <b>Context</b>: The software at the ChocAn Data Center is ran which allows operators to add new providers
+              to ChocAn, to delete providers who have resigned, and to update provider records.
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	The operator logs in to the system<br>
+            &nbsp;2.	The system displays a menu for the operator who can select an option<br>
+            &nbsp;3.	The operator chooses to manage providers<br>
+            &nbsp;4.	The system displays a menu with options to add, edit, or delete a provider<br>
+            &nbsp;5.	The operator performs the management process<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;1a. The log in information is not valid<br>
+            &nbsp;&nbsp;1a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;1a.2.  The use case goes back to step 1<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Add Provider -->
+        <div>
+          <p>
+            <b>Use Case</b>: Add Provider <b>extends</b> Manage Provider
+          </p>
+          <p>
+            <b>Context</b>: The operator adds a provider to the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the new provider to add<br>
+            &nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+            &nbsp;&nbsp;5.3.  The system adds the provider<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The provider already exists in the system<br>
+            &nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 4<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Delete Provider -->
+        <div>
+          <p>
+            <b>Use Case</b>: Delete Provider <b>extends</b> Manage Provider
+          </p>
+          <p>
+            <b>Context</b>: The operator deletes a provider from the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the provider to delete<br>
+            &nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+            &nbsp;&nbsp;5.3.  The system finds the provider on the database<br>
+            &nbsp;&nbsp;5.4.  The system deletes the provider<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The provider does not exist in the system<br>
+            &nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2c.  The provider is suspended<br>
+            &nbsp;&nbsp;&nbsp;5.2c.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2c.2.  The use case goes back to step 5.1<br>
+          </p>
+          <hr>
+        </div>
+        <!-- Update Provider -->
+        <div>
+          <p>
+            <b>Use Case</b>: Update Provider <b>extends</b> Manage Provider
+          </p>
+          <p>
+            <b>Context</b>: The operator updates information of a provider on the database
+          </p>
+          <p>
+            <b>Actors</b>: Operator
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;&nbsp;5.1.  The operator enters the information of the provider to update<br>
+            &nbsp;&nbsp;5.2.  The system validates that all of the required information is filled<br>
+            &nbsp;&nbsp;5.3.  The system finds the provider on the database<br>
+            &nbsp;&nbsp;5.4.  The operator enters information of the provider to update<br>
+            &nbsp;&nbsp;5.5.  The system updates the provider<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;&nbsp;5.2a.  Not all of the required information was entered<br>
+            &nbsp;&nbsp;&nbsp;5.2a.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2a.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2b.  The provider does not exist in the system<br>
+            &nbsp;&nbsp;&nbsp;5.2b.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2b.2.  The use case goes back to step 5.1<br>
+            &nbsp;&nbsp;5.2c.  The provider is suspended<br>
+            &nbsp;&nbsp;&nbsp;5.2c.1.  The system informs the operator<br>
+            &nbsp;&nbsp;&nbsp;5.2c.2.  The use case goes back to step 5.3<br>
+          </p>
+        </div>
+      </div>
+
+      <!-- Healthcare Services -->
+      <div>
+        <hr>
+        <p><center><b>Healthcare Services</b></center></p>
+        <center><img src="./images/requirements/healthcare_services.jpg" style="width: 50%; height: 80%;"></center>
+        <hr>
+        <!-- Bill ChocAn-->
+        <div>
+          <p>
+            <b>Use Case</b>: Bill ChocAn
+          </p>
+          <p>
+            <b>Context</b>: The provider bills ChocAn for a service they recently performed.
+          <p>
+            <b>Actors</b>: Provider
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1. The provider recieves the member card from the member and passes the card through the reader.<br>
+            &nbsp;2. The word "VALIDATED" appears and the provider enters the date the service was provided.<br>
+            &nbsp;3. Using the provider directory, the provider looks up the appropriate six-digit code corresponding to the
+              service provided.<br>
+            &nbsp;4. The provider keys in the service code.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a. The terminal communicates with ChocAn's Data Center to validate the service code.<br>
+            &nbsp;5. The software product writes a record to disk.<br>
+            &nbsp;6. The software product looks up the fee to be paid and displays it on the provider's terminal.<br>
+            &nbsp;7. The provider fills out a form in the terminal with the current date and time, the date the service was
+              provided, member name and number, service code, and fee to be paid.<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;1a. The member card is invalid.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a.1. The provider informs the member and the use case terminates.<br>
+            &nbsp;4a. The service code is invalid.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4a.1. The terminal informs the provider and the use case continues from step 4.<br>
+          </p>
+        </div>
+        <hr>
+        <!-- Verify Member -->
+        <div>
+          <p>
+            <b>Use Case</b>: Verify Member <b>extends</b> Bill ChocAn
+          </p>
+          <p>
+            <b>Context</b>: The member recieves health care services from the provider through ChocAn
+          <p>
+            <b>Actors</b>: Member, Provider
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1. The provider recieves ChocAn member card from member.<br>
+            &nbsp;2. The provider slides the card through the ChocAn computer terminal's card reader.<br>
+            &nbsp;3. The terminal validates member number.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.1. The terminal communicates with the ChocAn data software to validate member number
+              and membership.<br>
+            &nbsp;4. The provider provides health care service.<br>
+            &nbsp;5. The member receives an email with an attachment that lists services provided, sorted in order of service date,
+              at the end of every week.<br>
+            &nbsp;6. The provider hands back the member card to the member.<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;3a. The member is suspended.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.1. The reason is displayed, member suspended.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a.2. Proceed to step 5.<br>
+            &nbsp;3b. The member number is not valid.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.1. The reason is displayed, invalid number.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b.2. Proceed to step 6.<br>
+          </p>
+        </div>
+      </div>
+
+      <!-- Accounting -->
+      <div>
+        <hr>
+        <p><center><b>Accounting</b></center></p>
+        <center><img src="./images/requirements/accounting.jpg" style="width: 50%; height: 50%;"></center>
+
+        <!-- Execute Weekly Accounting Process -->
+        <div>
+          <hr>
+          <p>
+            <b>Use Case</b>: Execute Weekly Accounting Process
+          </p>
+          <p>
+            <b>Context</b>: At the end of each week on Friday at midnight the main accounting procedures run at the
+              ChocAn Data Center and produces reports
+          <p>
+            <b>Actors</b>: Scheduled Task (Timer)
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	At midnight on Friday the main accounting procedure is run at the ChocAn Data Center.<br>
+            &nbsp;2.	The ChocAn System generates a member report by reading the week’s file of services provided and creates a
+              member report for each member.<br>
+            &nbsp;&nbsp;2.1.	The report includes: Member Name (25 characters), Member number (9 digits), Member street address
+              (25 characters), Member city (14 characters), Member state (2 letters), Member ZIP code (5 digits)<br>
+            &nbsp;&nbsp;2.2.	For each service provided the report includes: Date of service (MM-DD-YYYY), Provider name
+              (25 characters), Service name (20 characters)<br>
+            &nbsp;&nbsp;2.3.	The ChocAn System sends the member report to each member via e-mail attachment.<br>
+            &nbsp;&nbsp;2.4.	Each member receives their weekly service report.<br>
+            &nbsp;3.	The ChocAn System generates provider report by reading the week’s files for each bill from providers and
+              creates a provider summary report for each provider.<br>
+            &nbsp;&nbsp;3.1.	The report includes: Provider name (25 characters), Provider number (9 digits), Provider street
+              address (25 characters), Provider city (14 characters), Provider state (2 letters), Provider ZIP code (5 digits),<br>
+            &nbsp;&nbsp;3.2.	For each service provided the report includes: Member name (25 characters), Member number
+              (9 digits), Service code (6 digits), Fee to be paid (up to $999.99), Total number of consultations with members
+              (3 digits), Total fee for week (up to $99,999.99)<br>
+            &nbsp;&nbsp;3.3.	The ChocAn System sends the provider summary report to each provider via e-mail attachment.<br>
+            &nbsp;&nbsp;3.4.	Each provider receives their weekly service report.<br>
+            &nbsp;4.	The ChocAn System generates a summary reports by reading the week’s files for all provider information
+              related to billing, and consultations for services provided to members and creates an accounts payable summary
+              report of all providers.<br>
+            &nbsp;&nbsp;4.1.	The Report includes:  every provider to be paid for the week, the number of consultation each
+              had and related total fees, total number of providers who provided services, total number of consultations, and
+              calculations of overall fee total.
+            &nbsp;&nbsp;4.2.	The ChocAn System sends the provider summary report to the manager.<br>
+            &nbsp;&nbsp;4.3.	The manager receives the accounts payable report.<br>
+            &nbsp;5.	The system uses the read-in files for each bill from providers to initiate the Electronic Fund Transfer
+              Process. <br>
+            &nbsp;&nbsp;5.1.	The record of electronic funds transfer data is written to a disk.<br>
+            &nbsp;6.	The ChocAn Systems finishes the reports and waits to be run again. <br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;1a.  The ChocAn System is set to the time zone of the central location of the ChocAn Data Center.<br>
+            &nbsp;2a. There is no new information related to services provided.<br>
+            &nbsp;&nbsp;2a.1 The ChocAn System skips over that member<br>
+            &nbsp;&nbsp;2a.2 The use case continues at step 2.1.<br>
+            &nbsp;&nbsp;3.a. There is no new information related to bill from providers.<br>
+            &nbsp;&nbsp;&nbsp;3.a.1 The ChocAn System skips over that provider.<br>
+            &nbsp;&nbsp;&nbsp;3.a.2The use case continues at step 3.1.<br>
+            &nbsp;4a. There is no new information for the current week related to billing, and consultations for services
+              provided to members.<br>
+            &nbsp;&nbsp;4a.1 The ChocAn System creates a summary report stating that there is no new information related
+              to billing, and consultations for services provided to members.<br>
+            &nbsp;&nbsp;4a.2 The use case continues at step 4.2.<br>
+          </p>
+          <hr>
+        </div>
+
+        <!-- Generate Summary Report -->
+        <div>
+          <p>
+            <b>Use Case</b>: Generate Summary Report
+          </p>
+          <p>
+            <b>Context</b>: The ChocAn System produces a weekly summary report of accounts payable and sends it to the manager.
+          <p>
+            <b>Actors</b>: Manager
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	The Manager selects Generate Summary Report from the terminal menu.<br>
+            &nbsp;2.	The ChocAn System reads the week’s files for all provider information related to billing, and consultations
+              for services provided to members and creates an accounts payable summary report of all providers.<br>
+            &nbsp;&nbsp;2.1.	The Report includes:  every provider to be paid for the week, the number of consultation each had
+              and related total fees, total number of providers who provided services, total number of consultations, and
+              calculations of overall fee total.<br>
+            &nbsp;3.	The ChocAn System sends the provider summary report to the manager.<br>
+            &nbsp;4.	The manager receives the Summary Report.<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;2a. There is no new information for the current week related to billing, and consultations for services provided
+              to members.<br>
+            &nbsp;&nbsp;2a.1 The ChocAn System creates a report stating that there is no new information related to billing, and
+              consultations for services provided to members.<br>
+            &nbsp;&nbsp;2a.2The use case continues at step 3.<br>
+          </p>
+          <hr>
+        </div>
+
+        <!-- Generate Provider Report -->
+        <div>
+          <p>
+            <b>Use Case</b>: Generate Provider Report
+          </p>
+          <p>
+            <b>Context</b>: Each Provider that has billed ChocAn during that week receives a summary report.
+          <p>
+            <b>Actors</b>: Manager
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	The Manager selects Generate Provider Report from the terminal menu.<br>
+            &nbsp;2. The ChocAn System reads the week’s files for each bill from providers and creates a provider
+              summary report for each provider.<br>
+            &nbsp;&nbsp;2.1 The report includes: Provider name (25 characters), Provider number (9 digits), Provider
+              street address (25 characters), Provider city (14 characters), Provider state (2 letters), Provider
+              ZIP code (5 digits),<br>
+            &nbsp;&nbsp;&nbsp;2.1.1 For each service provided the report includes: Member name (25 characters),
+              Member number (9 digits), Service code (6 digits), Fee to be paid (up to $999.99), Total number of
+              consultations with members (3 digits), Total fee for week (up to $99,999.99)<br>
+            &nbsp;3.	The ChocAn System sends the provider summary report for each provider to the manager.<br>
+            &nbsp;4.	Each manager receives the provider report.<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;2.a. There is no new information related to bill from providers.<br>
+            &nbsp;&nbsp;2.a.1 The ChocAn System creates a report stating that there is no new information related
+              to bill from providers.<br>
+            &nbsp;&nbsp;2.a.2The use case continues at step 3.<br>
+          </p>
+          <hr>
+        </div>
+
+        <!-- Generate Member Report -->
+        <div>
+          <p>
+            <b>Use Case</b>: Generate Member Rreport
+          </p>
+          <p>
+            <b>Context</b>: Each member who has consulted a ChocAn provider during that week receives a list of services provided.
+          <p>
+            <b>Actors</b>: Manager
+          </p>
+          <p>
+            <b>Main Success Scenario</b>:<br>
+            &nbsp;1.	The Manager selects Generate Member Report from the terminal menu.<br>
+            &nbsp;2.	The ChocAn System reads the week’s file of services provided and creates a member report for each member.<br>
+            &nbsp;&nbsp;2.1.	The report includes: Member Name (25 characters), Member number (9 digits), Member street address
+              (25 characters), Member city (14 characters), Member state (2 letters), Member ZIP code (5 digits)<br>
+            &nbsp;&nbsp;&nbsp;2.1.1.	For each service provided the report includes: Date of service (MM-DD-YYYY), Provider name
+              (25 characters), Service name (20 characters)<br>
+            &nbsp;3.	The ChocAn System sends the member report for each member to the manager.<br>
+            &nbsp;4.	Each manager receives the member report.<br>
+          </p>
+          <p>
+            <b>Extensions</b>:<br>
+            &nbsp;2a. There is no new information related to services provided.<br>
+            &nbsp;&nbsp;2a.1 The ChocAn System creates a report stating that there is no new information related to services provided.<br>
+            &nbsp;&nbsp;2a.2 The use case continues at step 3.<br>
+          </p>
+          <hr>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Glossary -->
+    <div>
+      <h2><b>Glossary</b></h2>
+      <p><u>Member</u> : A user who receives service from ChocAn.</p>
+      <p><u>Member Report</u> : A file for each member with name, number, address, and the service
+        information for that week.</p>
+      <p><u>Manager</u> : Handles Provider Report's and the Summary Report. </p>
+      <p><u>Member Record</u> : A record of all ChocAn members in which operators can add new members, delete resigned members,
+        and update member information. </p>
+      <p><u>Summary Report</u> : a report given to the manager for accounts payable. Lists every
+        provider to be paid that week, the number of consultations each had, and his or her total
+        fee for that week</p>
+      <p><u>Provider</u> : a health care professional who provides services to members</p>
+      <p><u>Provider Directory</u> : a file created to provide an ordered list of service names and
+        corresponding service codes and fees</p>
+      <p><u>Provider Record</u> : A record of all ChocAn service providers in which operators can add, delete,
+        or update provider information.</p>
+      <p><u>Provider Report</u> : A weekly file for each provider containing that provider's personal information and
+        consultation and service description for each service provided that week. The service description contains the
+        total number of consultations provided and the total fee for the week.</p>
+      <p><u>Electronic Funds Transfer Record</u> : A disk containing each provider's bank information and the amount to be
+        paid. </p>
+      <p><u>Operator</u> : Handles the Member and Provider Record's to add, delete, or update information.</p>
+      <br>
+    </div>
+
+    <hr>
+    <p style="text-align: right">Last updated : 11/4/18</p>
+
+  </body>
+</html>

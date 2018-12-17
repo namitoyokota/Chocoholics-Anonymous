@@ -1,0 +1,9 @@
+A good design must have high cohesion and low coupling. High cohesion implies a high degree of interaction within a module, 
+whereas low coupling indicates a low degree of interaction between two modules. Observing our UML class diagram above, we can
+agree that our design exhibits high cohesion and low coupling therefore our design is “good”. Evidence of low coupling is 
+demonstrated where the ‘Records’ class has a composite aggregate association to the ‘Entry’ class. This minimizes the number
+of connections between classes and encourages reusability. An instance of high cohesion can be observed in the ‘Records’ class
+which exhibits the qualifications for the best type of cohesion- informational. The ‘Records’ class performs multiple actions- 
+each with its own entry point, independent code for each action such as ‘addRecord’ or ‘getRecord’, and performs on the same
+data structure- ‘data’. Therefore, this encourages high interaction within the class and avoids high interaction between these 
+classes.

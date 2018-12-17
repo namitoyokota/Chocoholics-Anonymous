@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS 200-001</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+
+    <!-- Menu Bar -->
+    <div>
+      <ul>
+        <li><a href="report.html">Home</a></li>
+        <li><a href="report-requirements.html">Requirements</a></li>
+        <li><a href="report-analysis.html">Analysis</a></li>
+        <li><a class="active" href="report-design.html">Design</a></li>
+      </ul>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <h1>Design</h1>
+      <div class="names">
+        <!-- specify the submitter -->
+        <p>(Submitter)&nbsp;<b>Namito Yokota</b> - 11793390 - nyokota@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Josh Engler</b> - 11809462 - jdengler@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Hunter Esposito</b> - 11619229 - hesposito@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Ashley Phan</b> - 11494997 - ahphan@crimson.ua.edu - 8 hours spent</p>
+        <p><b>Conrad Spear</b> - 11534127 - caspear1@crimson.ua.edu - 8 hours spent</p>
+      </div>
+    </div>
+
+    <!-- Task Distribution -->
+    <div>
+      <hr>
+      <h2><b><a href="./images/design/commits.png">Task Distribution</a></b></h2>
+      <center><img src="./images/design/commits.png" style="width: 60%; height: 60%"></center>
+      <p><b>Namito Yokota</b> - Task 2 and Report - <b>20%</b><br>
+        <b>Josh Engler</b> - Task 1 - <b>20%</b><br>
+        <b>Hunter Esposito</b> - Task 2 - <b>20%</b><br>
+        <b>Ashley Phan</b> - Task 2 and Task 3 - <b>20%</b><br>
+        <b>Conrad Spear</b> - Task 2 - <b>20%</b>
+      <br>
+    </div>
+
+    <!-- Class Diagram -->
+    <div>
+      <hr>
+      <h2><b><a href="./vpp/design/Class_Diagram.vpp">UML Class Diagram</b></a></h2>
+      <center><img src="./images/design/Class_Diagram.jpg" style="width: 95%; height: 95%"></center>
+      <hr>
+    </div>
+
+    <!-- Sequence Diagrams -->
+    <div>
+      <h2><b>Sequence Diagrams</b></a></h2>
+      <center>
+        <b>
+        <!-- Manage Accounts -->
+        <div>
+          <a href="./vpp/design/Manage_Accounts.vpp"><p>Manage Member</p></a>
+          <img src="./images/design/Manage_Member.jpg" style="width: 50%; height: 50%"><hr>
+
+          <a href="./vpp/design/Manage_Accounts.vpp"><p>Manage Provider</p></a>
+          <img src="./images/design/Manage_Provider.jpg" style="width: 50%; height: 50%"><hr>
+        </div>
+
+        <!-- Healthcare Services -->
+        <div>
+          <a href="./vpp/design/Bill_ChocAn.vpp"><p>Bill ChocAn</p></a>
+          <img src="./images/design/Bill_ChocAn.PNG" style="width: 60%; height: 60%"><hr>
+
+          <a href="./vpp/design/Manage_Accounts.vpp"><p>Request Provider Directory</p></a>
+          <img src="./images/design/Request_Provider_Directory.PNG" style="width: 60%; height: 60%"><hr>
+        </div>
+
+        <!-- Accounting -->
+        <div>
+          <a href="./vpp/design/Main_Accounting.vpp"><p>Main Accounting</p></a>
+          <img src="./images/design/Main_Accounting.png" style="width: 60%; height: 60%"><hr>
+
+          <a href="./vpp/design/Generate_Provider_Report.vpp"><p>Generate Provider Report</p></a>
+          <img src="./images/design/Generate_Provider_Report.jpg" style="width: 60%; height: 60%"><hr>
+
+          <a href="./vpp/design/Generate_Member_Report.vpp"><p>Generate Member Report</p></a>
+          <img src="./images/design/Generate_Member_Report.PNG" style="width: 60%; height: 60%"><hr>
+
+          <a href="./vpp/design/Generate_Summary_Report.vpp"><p>Generate Summary Report</p></a>
+          <img src="./images/design/Generate_Summary_Report.jpg" style="width: 60%; height: 60%"><hr>
+        </div>
+        </b>
+      <center>
+    </div>
+
+    <!-- Coupling and Cohesion Paragraph -->
+    <div>
+        <h2><b><a href="./other/design/coupling_and_cohesion">Coupling and Cohesion Paragraph</b></a></h2>
+        <p>
+          A good design must have high cohesion and low coupling. High cohesion implies a high degree of interaction within a module, 
+          whereas low coupling indicates a low degree of interaction between two modules. Observing our UML class diagram above, we can
+          agree that our design exhibits high cohesion and low coupling therefore our design is &#34;good&#34;. Evidence of low coupling is 
+          demonstrated where the &#39;Records&#39; class has a composite aggregate association to the &#39;Entry&#39; class. This
+          minimizes the number of connections between classes and encourages reusability. An instance of high cohesion can be observed
+          in the &#39;Records&#39; class which exhibits the qualifications for the best type of cohesion- informational. The
+          &#39;Records&#39; class performs multiple actions- each with its own entry point, independent code for each action such as
+          &#39;addRecord&#39; or &#39;getRecord&#39;, and performs on the same data structure- &#39;data&#39;. Therefore, this
+          encourages high interaction within the class and avoids high interaction between these classes.
+        </p>
+        <hr>
+      </div>
+
+    <p style="text-align: right">Last updated : 11/5/18</p>
+
+  </body>
+
+</html>
