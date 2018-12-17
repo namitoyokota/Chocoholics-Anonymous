@@ -1,0 +1,20 @@
+Rubeus Hagrid
+334334334
+1 Forbidden Forest Drive
+Hogwarts
+Scotland
+77777
+12-02-2018
+12-02-2018 02:44:12
+Draco Malfoy
+999999991
+111111
+300.0
+12-02-2018
+12-02-2018 02:44:12
+Ronald Weasley
+676767676
+333333
+500.0
+Total number of consultations with members: 2
+Total fees for the week: $800.0

@@ -1,0 +1,5 @@
+Minerva McGonagall,2,110.0
+Rubeus Hagrid,2,800.0
+Total number of providers: 2
+Total number of consultations: 4
+Total number of fees: $910.0

@@ -1,0 +1,14 @@
+Albus Dumbledore
+111111111
+908 Homeless Road
+Hogsmeade
+California
+30012
+12-05-2018
+12-05-2018 02:44:12
+Neville Longbottom
+123123123
+654321
+200.0
+Total number of consultations with members: 1
+Total fees for the week: $200.0

@@ -1,0 +1,6 @@
+Potion Diet,123456,100
+Memory Eraser,654321,200
+Broom Workout,111111,300
+Tea Detox,222222,400
+Muggles Obesity,333333,500
+Check up,888888,10
